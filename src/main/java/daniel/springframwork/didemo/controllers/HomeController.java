@@ -1,4 +1,4 @@
-package daniel.springframwork.didemo.Controllers;
+package daniel.springframwork.didemo.controllers;
 
 import org.springframework.stereotype.Controller;
 
