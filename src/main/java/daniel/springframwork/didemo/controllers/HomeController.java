@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
  **/
 @Controller
 public class HomeController {
-    public String hello(){
+    public String hello() {
         System.out.println("HELLO!!!!!!!!!!!!!");
         return "test";
     }
