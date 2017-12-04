@@ -5,7 +5,7 @@ import daniel.springframwork.didemo.services.GreetingServiceImpl;
 
 /**
  *
- * @author Daniel Tominov on 12/4/2017
+ * @author  Daniel Tominov on 12/4/2017
  *
  */
 public class ConstructorInjectedController {
