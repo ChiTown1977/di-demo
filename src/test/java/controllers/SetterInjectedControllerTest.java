@@ -3,7 +3,6 @@ package controllers;
 import daniel.springframwork.didemo.DiDemoApplication;
 import daniel.springframwork.didemo.controllers.SetterInjectorController;
 import daniel.springframwork.didemo.services.GreetingService;
-import daniel.springframwork.didemo.services.GreetingServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,11 +21,11 @@ public class SetterInjectedControllerTest {
     public void setUp() {
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class);
         setterInjectorController = (SetterInjectorController) ctx.getBean("setterInjectorController");
-        greetingService = (GreetingServiceImpl) ctx.getBean("greetingServiceImpl");
+        greetingService = (GreetingService) ctx.getBean("setterGreetingServiceImpl");
     }
 
     @Test
     public void testGreeting() {
-        Assert.assertEquals(greetingService.sayGreeting(), setterInjectorController.sayHello());
+        Assert.assertEquals(setterInjectorController.sayHello(), greetingService.sayGreeting());
     }
 }
